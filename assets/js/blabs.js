@@ -14,7 +14,7 @@ function createBlab(blabData) {
           '<span> · </span>' +
           '<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' + encodeURI(document.location.host) + '%2Fblab%2F' + blabData.id + '&t=' + blabData.content + '">share</a>' +
           '<span> · </span>' +
-          '<a>' + blabData.createdAt.toLocaleString() + '</a>' +
+          '<a href="/blab/' + blabData.id + '">' + blabData.createdAt.toLocaleString() + '</a>' +
         '</div>' +
       '</div>' +
     '</div>' +
@@ -54,6 +54,7 @@ $(document).ready(function () {
     url: '/blab',
     type: 'get',
     success: function (blabs) { 
+      $('#blabs-container').html('');
       for (var i = 0; i < blabs.length; i++) {
         createBlab(blabs[i]);
       }

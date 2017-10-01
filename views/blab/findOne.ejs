@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="blah-blah"></div>
+    <div class="blabber-bg">
+      <form id="create-blab">
+        <input id="blabber-upvotes" name="upvotes" type="hidden" value="1"/>
+        <label class="blab-content-label" for="blab-content">Hey, wanna write something stupid?</label>
+        <textarea class="blab-content-input" name="content" id="blab-content" rows="3" placeholder="Stupid goes here..."></textarea>
+        <label class="blab-email-label" for="blabber-email">Identify thyself</label>
+        <input class="blab-email-input" id="blabber-email" name="email" type="email" required placeholder="Enter your e-mail" autocomplete="on">
+        <input id="create-blab" class="blab-send-button" type="submit" value="Blab it!"></input>
+      </form>
+    </div>
+  </div>
+<br/>
+<div id="blabs-container" class="blabber-bg">
+    <div id="<%= data.id %>" class="blab-container">
+        <div class="blab-image">
+            <img src="https://email2pic.herokuapp.com/gravatar/<%= data.email %>">
+        </div>
+        <div class="blab-body">
+            <div class="blab-email"><%= data.email %></div>
+            <div class="blab-content"><%= data.content %></div>
+        </div>
+    </div>
+</div>
