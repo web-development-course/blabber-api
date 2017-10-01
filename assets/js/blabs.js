@@ -12,9 +12,7 @@ function createBlab(blabData) {
           '<span> · </span>' +
           '<a href="#" class="upvote-blab" onclick="upvoteBlab(\'' + blabData.id + '\')">upvote (<span class="blab-upvotes">' + blabData.upvotes + '</span>)</a>' +
           '<span> · </span>' +
-          '<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' + encodeURI(document.location.host) + '%2Fblab%2F' + blabData.id + '&t=' + blabData.content + '">share</a>' +
-          '<span> · </span>' +
-          '<a href="/blab/' + blabData.id + '">' + blabData.createdAt.toLocaleString() + '</a>' +
+          '<a>' + blabData.createdAt.toLocaleString() + '</a>' +
         '</div>' +
       '</div>' +
     '</div>' +
