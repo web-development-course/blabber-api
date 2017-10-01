@@ -12,13 +12,14 @@
     </div>
   </div>
 <br/>
+<% try {data = eval('(' + data + ')')} catch (e) {} %>
 <div id="blabs-container" class="blabber-bg">
     <div id="<%= data.id %>" class="blab-container">
         <div class="blab-image">
             <img src="https://email2pic.herokuapp.com/gravatar/<%= data.email %>">
         </div>
         <div class="blab-body">
-            <div class="blab-email"><%= data.email %></div>
+            <div class="blab-email"><%= data.id %></div>
             <div class="blab-content"><%= data.content %></div>
         </div>
     </div>
