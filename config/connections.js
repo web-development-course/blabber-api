@@ -58,11 +58,7 @@ module.exports.connections = {
   ***************************************************************************/
   mLabMongodbServer: {
     adapter: 'sails-mongo',
-    host: 'mlab.com',
-    port: 56789,
-    user: 'guyso_wix', //optional
-    password: 'N0000Way', //optional
-    database: 'webdev-wix' //optional
+    url: 'mongodb://webdev:blabber@ds159274.mlab.com:59274/webdev-wix'
   },
 
   /***************************************************************************
